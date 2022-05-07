@@ -46,5 +46,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "proxy": {
+    "http": "http://localhost:3000",
+    "https": "http://localhost:3000"
   }
 }
