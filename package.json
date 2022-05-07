@@ -48,7 +48,7 @@
     ]
   },
   "proxy": {
-    "http": "http://localhost:5000",
-    "https": "http://localhost:5000"
+    "http": "https://sweet-piroshki-5817c7.netlify.app:5000",
+    "https": "https://sweet-piroshki-5817c7.netlify.app:5000"
   }
 }
