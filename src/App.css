@@ -1,0 +1,38 @@
+.page-title {
+  display: block !important;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 10px;
+}
+
+.centered-message {
+  display: block !important;
+  text-align: center;  
+  margin: 10px;
+}
+
+.form-container {
+  width: 400px;
+  margin: auto;
+}
+
+.trash-button{
+  float: right !important;
+}
+
+.comment-compact{
+  margin-bottom: 0% !important;
+}
+
+.hidden-input {
+  display: none !important;
+}
+
+.epic-form {
+  color: white !important;
+}
+
+.epic-form-list {
+  color: white !important;
+  padding-left: 10px !important;
+}

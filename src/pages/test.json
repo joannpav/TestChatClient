@@ -1,0 +1,22 @@
+{
+    "graphQLErrors":
+    [
+        {
+            "message":"Authorization token must be provided","locations":[{"line":2,"column":3}],
+            "path":["getEpics"],
+            "extensions":
+                {
+                    "code":"INTERNAL_SERVER_ERROR",
+                    "exception":
+                    {
+                        "stacktrace":
+                            [
+                                "Error: Authorization token must be provided"," at module.exports (/Users/joann/Projects/TestChat/util/check-auth.js:24:11)"," at Object.getEpics (/Users/joann/Projects/TestChat/graphQL/resolvers/epics.js:28:32)"," at field.resolve (/Users/joann/Projects/TestChat/node_modules/apollo-server-core/dist/utils/schemaInstrumentation.js:52:26)"," at resolveField (/Users/joann/Projects/TestChat/node_modules/graphql/execution/execute.js:464:18)"," at executeFields (/Users/joann/Projects/TestChat/node_modules/graphql/execution/execute.js:292:18)"," at executeOperation (/Users/joann/Projects/TestChat/node_modules/graphql/execution/execute.js:236:122)"," at executeImpl (/Users/joann/Projects/TestChat/node_modules/graphql/execution/execute.js:116:14)"," at execute (/Users/joann/Projects/TestChat/node_modules/graphql/execution/execute.js:60:35)"," at execute (/Users/joann/Projects/TestChat/node_modules/apollo-server-core/dist/requestPipeline.js:204:48)"," at processGraphQLRequest (/Users/joann/Projects/TestChat/node_modules/apollo-server-core/dist/requestPipeline.js:138:34)"]}}}],"networkError":null,"message":"GraphQL error: Authorization token must be provided"}Error loading {"graphQLErrors":[{"message":"Authorization token must be provided","locations":[{"line":2,"column":3}],"path":["getEpics"],"extensions":{"code":"INTERNAL_SERVER_ERROR","exception":{"stacktrace":["Error: Authorization token must be provided"," at module.exports (/Users/joann/Projects/TestChat/util/check-auth.js:24:11)"," at Object.getEpics (/Users/joann/Projects/TestChat/graphQL/resolvers/epics.js:28:32)"," at field.resolve (/Users/joann/Projects/TestChat/node_modules/apollo-server-core/dist/utils/schemaInstrumentation.js:52:26)"," at resolveField (/Users/joann/Projects/TestChat/node_modules/graphql/execution/execute.js:464:18)"," at executeFields (/Users/joann/Projects/TestChat/node_modules/graphql/execution/execute.js:292:18)"," at executeOperation (/Users/joann/Projects/TestChat/node_modules/graphql/execution/execute.js:236:122)"," at executeImpl (/Users/joann/Projects/TestChat/node_modules/graphql/execution/execute.js:116:14)"," at execute (/Users/joann/Projects/TestChat/node_modules/graphql/execution/execute.js:60:35)"," at execute (/Users/joann/Projects/TestChat/node_modules/apollo-server-core/dist/requestPipeline.js:204:48)"," at processGraphQLRequest (/Users/joann/Projects/TestChat/node_modules/apollo-server-core/dist/requestPipeline.js:138:34)"
+                            ]
+                    }
+                }
+        }
+    ],
+    "networkError":null,
+    "message":"GraphQL error: Authorization token must be provided"
+}
