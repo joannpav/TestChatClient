@@ -48,7 +48,7 @@
     ]
   },
   "proxy": {
-    "http": "http://localhost:3000",
-    "https": "http://localhost:3000"
+    "http": "http://localhost:5000",
+    "https": "http://localhost:5000"
   }
 }
