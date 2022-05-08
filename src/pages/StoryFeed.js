@@ -1,13 +1,12 @@
 import React, { useContext, useState } from "react";
 import { useQuery } from '@apollo/react-hooks';
-import { Image, Feed, Card, Container, Segment, Message  } from 'semantic-ui-react';
+import { Image, Feed, Card, Message  } from 'semantic-ui-react';
 import { FETCH_STORIES_QUERY } from "../util/graphql";
 import moment from 'moment';
 import { AuthContext } from "../context/auth";
 import LikeButton from "../components/LikeButton";
 import DeleteButton from "../components/DeleteButton";
 import TestScenarioButton from "../components/TestScenarioButton";
-import StoryForm from "../components/StoryForm";
 import { useNavigate } from "react-router";
 import { useParams } from "react-router-dom";
 import SectionBreadCrumb from "../components/SectionBreadCrumb";
@@ -16,7 +15,7 @@ import EpicInfoBlock from "../components/EpicInfoBlock";
 import StoryCreationOptions from "../components/StoryCreationOptions";
 
 function StoryFeed() {
-    const [storyFeed, setStoryFeed] = useState();
+    const [setStoryFeed] = useState();
 
     const { user } = useContext(AuthContext);    
     const { orgName, epicId } = useParams();

@@ -21,7 +21,7 @@ const GET_EPICS = gql`
 
 
 function JiraConfig() {    
-    const [projectKey, setProjectKey] = useState("TES")    
+    const [projectKey] = useState("TES")    
     const { user } = useContext(AuthContext);
     const { data, loading, error } = useQuery(GET_EPICS, {
         variables: { projectKey }

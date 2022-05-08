@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import { hasOperationName, aliasQuery, aliasMutation } from '../../utilities/graphql-test-utils';
+import { aliasQuery, aliasMutation } from '../../utilities/graphql-test-utils';
 
 
 describe('story feed page', () => {    

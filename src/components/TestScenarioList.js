@@ -16,7 +16,7 @@ function  TestScenarioList({testScenarios, storyId, user}) {
     const [scenarios, setScenarios] = useState();   
     const [scenarioComments, setScenarioComments] = useState("");
     const [showScenarioComments, setShowScenarioComments] = useState(false)
-    const [getScenarioList, { loading, error, data}] = useLazyQuery(
+    const [getScenarioList] = useLazyQuery(
       FETCH_STORY_QUERY, {
         fetchPolicy: "network-only",
         variables: {

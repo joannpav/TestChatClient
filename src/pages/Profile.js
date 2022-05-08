@@ -1,8 +1,7 @@
-import React, { useContext, Component, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Card, Icon, Image, Label, Grid, Menu, Segment } from 'semantic-ui-react'
 import { useNavigate } from "react-router"
 import { useParams } from "react-router-dom";
-import moment from 'moment';
 import {AuthContext} from "../context/auth";
 import JiraConfig from "../pages/JiraConfig";
 
@@ -41,7 +40,7 @@ function Profile() {
             </Card.Description>
             </Card.Content>
             <Card.Content extra>
-            <a>
+            <a href="/">
                 <Icon name='user' />
                 22 Friends
             </a>

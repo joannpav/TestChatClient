@@ -11,14 +11,14 @@ import { FETCH_STORIES_QUERY, GET_JIRA_STORIES } from '../util/graphql';
 
 function JiraStories() {   
     const { epicId } = useParams();
-    const [projectKey, setProjectKey] = useState("TES")    
+    const [projectKey] = useState("TES")    
     const { user } = useContext(AuthContext);
     const { data, loading, error } = useQuery(GET_JIRA_STORIES, {
         variables: { projectKey, epicId },
         errorPolicy: "all",
         fetchPolicy: "cache-first"
     });  
-    const { values, onChange, onSubmit } = useForm(createStoryCallback, {                
+    const { values, onSubmit } = useForm(createStoryCallback, {                
         epicId,      
         body: '',
         acceptanceCriteria: ''              

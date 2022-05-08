@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/react-hooks'
 import { Card, Comment, Form } from 'semantic-ui-react';
-import { useNavigate } from 'react-router-dom';
 
 const ScenarioCommentPopup = ({user, storyId, scenarioId, handleCallback}) => {       
     const[comment, setComment] = useState('');
-    const [submitComment, { loading, error }] = useMutation(SUBMIT_SCENARIO_COMMENT_MUTATION, {
+    const [submitComment, { error }] = useMutation(SUBMIT_SCENARIO_COMMENT_MUTATION, {
         update() {
             setComment('');
             if (handleCallback) handleCallback(comment);

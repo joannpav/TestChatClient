@@ -7,11 +7,11 @@ import { FETCH_EPICS_QUERY, GET_JIRA_EPICS } from '../util/graphql';
 import CustomPopup from '../util/CustomPopup';
 
 
-function DeleteEpicButton({ epicId, orgName, handleCallback }) {
+function DeleteEpicButton({ epicId, orgName }) {
     const [confirmOpen, setConfirmOpen] = useState(false);   
-    const [projectKey, setProjectKey] = useState("TES")    
+    const [projectKey] = useState("TES")    
   
-    const [deleteEpic, { error, loading }] = useMutation(DELETE_EPIC_MUTATION, {
+    const [deleteEpic] = useMutation(DELETE_EPIC_MUTATION, {
         variables: {epicId},
         refetchQueries: [{ 
             query: FETCH_EPICS_QUERY, 

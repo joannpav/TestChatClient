@@ -11,10 +11,10 @@ import DeleteEpicButton from "../components/DeleteEpicButton";
 import EpicCreationOptions from "../components/EpicCreationOptions";
 
 function EpicFeed() {
-    const [epicFeed, setEpicFeed] = useState();
+    const [setEpicFeed] = useState();
     const { user } = useContext(AuthContext);
     const { orgName } = useParams();
-    const { data, error, loading, fetchMore } = useQuery(FETCH_EPICS_QUERY, {        
+    const { data, error, loading } = useQuery(FETCH_EPICS_QUERY, {        
         variables: {
             orgName
         },

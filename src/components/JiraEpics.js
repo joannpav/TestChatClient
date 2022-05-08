@@ -3,7 +3,7 @@ import { Form, Grid, List, Checkbox } from 'semantic-ui-react';
 import { useForm } from '../util/hooks';
 import { useMutation } from '@apollo/react-hooks';
 import { AuthContext } from "../context/auth";
-import { gql, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { useNavigate } from 'react-router';
 import { useParams } from "react-router-dom";
 import { FETCH_EPICS_QUERY, CREATE_JIRA_EPIC_MUTATION, GET_JIRA_EPICS } from '../util/graphql';
@@ -11,14 +11,14 @@ import { FETCH_EPICS_QUERY, CREATE_JIRA_EPIC_MUTATION, GET_JIRA_EPICS } from '..
 
 function JiraEpics() {   
     const { orgName } = useParams(); 
-    const [projectKey, setProjectKey] = useState("TES")    
+    const [projectKey] = useState("TES")    
     const { user } = useContext(AuthContext);
     const { data, loading, error } = useQuery(GET_JIRA_EPICS, {
         variables: { projectKey },
         errorPolicy: "all",
         fetchPolicy: "cache-first"
     });  
-    const { values, onChange, onSubmit } = useForm(createEpicCallback, {                
+    const { values, onSubmit } = useForm(createEpicCallback, {                
         epicName: '',
         description: '',                
     });    

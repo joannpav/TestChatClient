@@ -6,7 +6,7 @@ import moment from 'moment';
 
 function EpicInfoBlock(epicId) {
     const theEpicId = epicId.epicId;
-    const { data, error, loading } = useQuery(FETCH_EPIC_QUERY, {
+    const { data, loading } = useQuery(FETCH_EPIC_QUERY, {
         variables: {
             epicId: theEpicId
         }

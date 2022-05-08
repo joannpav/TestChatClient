@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 
 function EpicNameInfo(epicId) {
-    const { data, error, loading } = useQuery(FETCH_EPIC_QUERY, {
+    const { data, loading } = useQuery(FETCH_EPIC_QUERY, {
         variables: {
             epicId
         }
